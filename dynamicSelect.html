@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/dynSlct.js"   type="text/javascript"> </script>
+    <link rel="stylesheet" href="./Styles.css">
+    <body >
+    <div class="container" >
+     <div class="form-wrap">
+        
+        <div class="category_div form-group" id="category_div">
+            <select  name="category"  class="required-entry"  id="category"  onchange="javascript: dynamicdropdown1(this.options[this.selectedIndex].value);">
+                <option value="">---Choose Format---</option>
+                <option value="All_Formats">All Formats</option>
+                <option value="KCR_Only">KCR Only</option>
+                <option value="MOBI_only">MOBI Only</option>
+                <option value="MOP/YJOP">MOP/YJOP</option>
+                <option value="Non-YJ">Non-YJ</option>
+                <option value="YJ">YJ</option>    
+            </select>
+        </div>
+        
+        <br>
+        <div class="sub_category_div1 form-group" id="sub_category_div1"> 
+           
+            <select  name="subcategory1" id="subcategory1" onchange="javascript: dynamicdropdown2(this.options[this.selectedIndex].value);" >
+                <option value="">---Choose devices---</option>
+           </select>
+            <noscript>
+                <select name="subcategory1" id="subcategory1"  onchange="javascript: dynamicdropdown2(this.options[this.selectedIndex].value);" >
+                    <option value="">---Choose devices---</option>
+                </select>
+            </noscript>
+        </div>
+        <br>
+        <div class="sub_category_div2 form-group" id="sub_category_div2" >
+            <select name="subcategory2" id="subcategory2">
+                <option value="">---Choose Sources---</option>
+           </select>
+            <noscript>
+                <select name="subcategory2" id="subcategory2" >
+                    <option value="">---Choose Sources---</option>
+                </select>
+            </noscript>
+        </div>
+        <br>
+        
+          <button  onclick="show()">Submit</button>
+          <p id="demo1"></p><p id="demo2"></p><p id="demo3"></p><p id="demo4"></p>
+            
+     
+      
+    </body>
+    </div>
+</html>
+
+
+<!-- *****************    END ********************************** -->
+
+
+
+
+ <!-- <select  class="required-entry" id="errCategory">
+            <option value="">---Choose Error Category---</option>
+            <option value="Formatting blank pages">Formatting blank pages</option>
+            <option value="Formatting blod italic underline">Formatting blod italic underline</option>
+            <option value="Formatting content not having enhanced type setting">Formatting content not having enhanced type setting</option>
+            <option value="Formatting dropcap liftcap chapter initial">Formatting dropcap liftcap chapter initial</option>
+            <option value="Formatting extracts not differentiated">Formatting extracts not differentiated</option>
+            <option value="Formatting forced backgroud color">Formatting forced backgroud color</option>
+            <option value="Formatting forced font color">Formatting forced font color</option>
+            <option value="Formatting forced font face">Formatting forced font face</option>
+            <option value="Formatting forced font size">Formatting forced font size</option>
+            <option value="Formatting landscape">Formatting landscape</option>
+            <option value="Formatting line breaks">Formatting line breaks</option>
+            <option value="Formatting line spacing">Formatting line spacing</option>
+            <option value="Formatting list">Formatting list</option>
+            <option value="Formatting margin or padding">Formatting margin or padding</option>
+            <option value="Formatting others">Formatting others</option>
+            <option value="Formatting overlapping">Formatting overlapping</option>
+            <option value="Formatting page breaks">Formatting page breaks</option>
+            <option value="Formatting paragraph double spacing">Formatting paragraph double spacing</option>
+            <option value="Formatting paragraph indentations">Formatting paragraph indentations</option>
+            <option value="Formatting section breaks">Formatting section breaks</option>
+            <option value="Formatting sidebar image table footnote interrupting the flow of text">Formatting sidebar image table footnote interrupting the flow of text</option>
+            <option value="Formatting text alignment">Formatting text alignment</option>
+            <option value="Image quality poor quality">Image quality poor quality</option>
+            <option value="Image quality inaccurate">Image quality inaccurate</option>
+            <option value="Image quality Illeigible image">Image quality Illeigible image</option>
+            <option value="Jumbled content">Jumbled content</option>
+            <option value="Table errors">Table errors</option>
+        </select> -->
+       

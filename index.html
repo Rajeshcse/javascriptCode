@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // window.alert("hello amazon ! ");
+      // Create button
+
+      var select1 = document.createElement("select");
+      var select2 = document.createElement("select");
+      var select3 = document.createElement("select");
+
+      var categoriesArray1 = [
+        "Format",
+        "AllFormat",
+        "Non YJ",
+        "yj",
+        "kcr-only",
+        "mobi-only",
+        "MOP/YJOP",
+      ];
+      var categoriesArray2 = [
+        "Devices",
+        "All Devices",
+        "Android",
+        "both fire and e-ink",
+        "e-ink Devices only",
+        "e-ink/ fire / ios devices (yj only)",
+        "fos",
+        "FOS Devices Only",
+        "ios",
+        "Ios Only",
+        "IOS KCR",
+        "Kindle Cloud Reader",
+        "kindle for pc/ mac",
+        "only e-ink",
+        "only fire tablet",
+        "only kindle for ios (yj only)",
+        "pc",
+      ];
+      var categoriesArray3 = [
+        "Source",
+        "(Both YJ[bird eye view enabled] and Mobi)",
+        "DOC",
+        "DOC/DOCX/RTF",
+        "EPUB/HTML/Mobi",
+        "Fixed content",
+        "mobi-onlyFixed Layout/Image Based / kpf",
+        "Fixed Layout/Image Based / non kpf",
+        "none",
+        "PDF/KPF inside PDF",
+        "Reflowable content",
+      ];
+
+      document.body.appendChild(select1);
+      document.body.appendChild(select2);
+      document.body.appendChild(select3);
+
+      select1.setAttribute(
+        "style",
+        "font-size:12px  ; position: absolute ; top: 50px ; right:560px ;"
+      );
+      select2.setAttribute(
+        "style",
+        "font-size:12px ;  position: absolute ; top: 50px ; right:368px"
+      );
+      select3.setAttribute(
+        "style",
+        "font-size:12px ; position: absolute ; top: 50px ; right:115px"
+      );
+
+      select1.id = "categoriesList1";
+      select2.id = "categoriesList2";
+      select3.id = "categoriesList3";
+
+      select1.onchange = ShowThedetails1;
+      select2.onchange = ShowThedetails2;
+      select3.onchange = ShowThedetails3;
+
+      for (let i = 0; i < categoriesArray1.length; i++) {
+        const option1 = document.createElement("option");
+        option1.value = categoriesArray1[i];
+        option1.text = categoriesArray1[i];
+        select1.appendChild(option1);
+      }
+      for (let j = 0; j < categoriesArray2.length; j++) {
+        const option2 = document.createElement("option");
+        option2.value = categoriesArray2[j];
+        option2.text = categoriesArray2[j];
+        select2.appendChild(option2);
+      }
+      for (let k = 0; k < categoriesArray3.length; k++) {
+        const option3 = document.createElement("option");
+        option3.value = categoriesArray3[k];
+        option3.text = categoriesArray3[k];
+        select3.appendChild(option3);
+      }
+
+      function ShowThedetails1() {
+        let category1 = document.getElementById("categoriesList1").value;
+        if (category1.match("AllFormat")) {
+          alert("AllFormat clicked ");
+        }
+        if (category1.match("kcr-only")) {
+          alert("kcr-only clicked !");
+        }
+        if (category1.match("mobi-only")) {
+          alert("mobi-only clicked !");
+        }
+        if (category1.match("yj")) {
+          alert("yj clicked");
+        }
+        if (category1.match("Non YJ")) {
+          alert("Non-yj format clicked");
+        }
+        if (category1.match("MOP/YJOP")) {
+          alert("MOP/YJOP format clicked!");
+        }
+      }
+      function ShowThedetails2() {
+        var category2 = document.getElementById("categoriesList2").value;
+        if (category2.match("All Devices")) {
+          alert("AllDevices clicked ");
+        }
+
+        if (category2.match("Android")) {
+          alert("Android clicked !");
+        }
+        if (category2.match("both fire and e-ink")) {
+          alert("both fire and e-ink clicked !");
+        }
+        if (category2.match("e-ink Devices only")) {
+          alert("e-ink Devices only clicked");
+        }
+        if (category2.match("e-ink/ fire / ioS devices (yj only)")) {
+          alert("e-ink/ fire / ios devices (yj only)  format clicked");
+        }
+        if (category2.match("fos")) {
+          alert("fos format clicked!");
+        }
+        if (category2.match("FOS Devices Only")) {
+          alert("FOS Devices Only format clicked!");
+        }
+        if (category2.match("ios")) {
+          alert("ios  clicked!");
+        }
+        if (category2.match("Ios Only")) {
+          alert(" *Ios Only* format clicked!");
+        }
+        if (category2.match("IOS KCR")) {
+          alert("IOS KCR  format clicked!");
+        }
+        if (category2.match("Kindle Cloud Reader")) {
+          alert("Kindle Cloud Reader format clicked!");
+        }
+        if (category2.match("kindle for pc/ mac")) {
+          alert("kindle for pc/ mac format clicked!");
+        }
+        if (category2.match("only e-ink")) {
+          alert("only e-ink format clicked!");
+        }
+        if (category2.match("only fire tablet")) {
+          alert("only fire tablet format clicked!");
+        }
+        if (category2.match("only kindle for ios (yj only)")) {
+          alert("only kindle for ios (yj only) format clicked!");
+        }
+        if (category2.match("pc")) {
+          alert("pc format clicked!");
+        }
+      }
+
+      function ShowThedetails3() {
+        let category3 = document.getElementById("categoriesList3").value;
+        if (category3.match("AllFormat")) {
+          alert("AllFormat clicked ");
+        }
+
+        if (category3.match("kcr-only")) {
+          alert("kcr-only clicked !");
+        }
+        if (category3.match("mobi-only")) {
+          alert("mobi-only clicked !");
+        }
+        if (category3.match("yj")) {
+          alert("yj clicked");
+        }
+        if (category3.match("Non YJ")) {
+          alert("Non-yj format clicked");
+        }
+        if (category3.match("MOP/YJOP")) {
+          alert("MOP/YJOP format clicked!");
+        }
+      }
+    </script>
+  </body>
+</html>

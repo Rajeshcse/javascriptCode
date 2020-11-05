@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create dyanamic dropdown list in javascript</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script language="javascript" type="text/javascript">
+      function dynamicdropdown(listindex) {
+        document.getElementById("subcategory").length = 0;
+        switch (listindex) {
+          case "fruits":
+            document.getElementById("subcategory").options[0] = new Option(
+              "Please select fruits",
+              ""
+            );
+            document.getElementById("subcategory").options[1] = new Option(
+              "apple",
+              "apple"
+            );
+            document.getElementById("subcategory").options[2] = new Option(
+              "banana",
+              "banana"
+            );
+            document.getElementById("subcategory").options[3] = new Option(
+              "mangoes",
+              "mangoes"
+            );
+            break;
+
+          case "meats":
+            document.getElementById("subcategory").options[0] = new Option(
+              "Please select meats",
+              ""
+            );
+            document.getElementById("subcategory").options[1] = new Option(
+              "pigs",
+              "pigs"
+            );
+            document.getElementById("subcategory").options[2] = new Option(
+              "chicken",
+              "chicken"
+            );
+            break;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <title>Dynamic Drop Down List</title>
+  <body>
+    <div class="category_div" id="category_div">
+      Please specify food items:
+      <select
+        name="category"
+        class="required-entry"
+        id="category"
+        onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);"
+      >
+        <option value="">Select food items</option>
+        <option value="Php">fruits</option>
+        <option value="Javascript">meats</option>
+      </select>
+    </div>
+    <div class="sub_category_div" id="sub_category_div">
+      Please select foods:
+      <script type="text/javascript" language="JavaScript">
+        document.write(
+          '<select name="subcategory" id="subcategory"><option value="">Please select foods</option></select>'
+        );
+      </script>
+      <noscript>
+        <select name="subcategory" id="subcategory">
+          <option value="">Please select foods</option>
+        </select>
+      </noscript>
+    </div>
+  </body>
+</html>
